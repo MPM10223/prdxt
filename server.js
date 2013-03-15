@@ -22,14 +22,16 @@ function start(route, handle) {
 	  
 	  var pathname = url.parse(req.url).pathname;
 	  
-	  path.exists(filePath, function(exists) {
+	  fs.exists(filePath, function(exists) {
 	    if(exists) {
 	      // serve up the file directly
 	      fs.readFile(filePath, function(error, content) {
 	        if(error) {
 	          res.writeHead(500);
+	          res.write('error loading file: ' + filePath);
 	          res.end();
 	        } else {
+	          console.log('successfully served ' + filePath);
 	          res.writeHead(200, {'Content-Type': contentType });
 	          res.end(content, 'utf-8');
 	        }

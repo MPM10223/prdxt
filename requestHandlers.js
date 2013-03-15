@@ -6,10 +6,10 @@ function login(res) {
   	'<head>'+
   	'<title>Sign In &middot; prdxt</title>'+
   	'<meta name="viewport" content="width=device-width, initial-scale=1.0" />'+
-  	'<link href="../bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">'+
-  	'<link href="../css/signin.css" rel="stylesheet" media="screen">'+
+  	'<link href="/bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">'+
+  	'<link href="/css/signin.css" rel="stylesheet" media="screen">'+
   	'</head>'+
-  	'<body style="padding-top: 40px;">'+
+  	'<body style="padding-top: 40px; background-color: #f5f5f5;">'+
   	'<div class="container">'+
   	'<form class="form-signin" action="/authenticate" method="post">'+
   	'<h2 class="form-signin-heading">prdxt</h2>'+
@@ -18,7 +18,7 @@ function login(res) {
   	'<button class="btn btn-large btn-primary" type="submit">Login</button>'+
   	'</form>'+
   	'</div>'+
-  	'<script src="../bootstrap/js/bootstrap.js"></script>'
+  	'<script src="/bootstrap/js/bootstrap.js"></script>'
   	'</body>'+
   	'</html>';
   
